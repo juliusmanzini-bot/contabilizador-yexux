@@ -1,11 +1,11 @@
-name = "yexux-convites"
+name = "yexux-convites-api"
 main = "worker.js"
-compatibility_date = "2026-08-28"
+compatibility_date = "2026-09-03"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "yexux-convites"
-database_id = "COLE_AQUI_O_DATABASE_ID"
+database_id = "31cfea74-06a3-4d27-8a90-365d55dc46f8"
 
-# Configure a chave administrativa como SECRET, nunca neste arquivo:
-# npx wrangler secret put ADMIN_KEY
+# A chave administrativa deve ser configurada como Secret no Cloudflare.
+# Não coloque a ADMIN_KEY diretamente neste arquivo.
