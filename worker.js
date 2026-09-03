@@ -68,18 +68,9 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, "") || "/";
     try {
-      if (path === "/api/debug-auth" && request.method === "GET") {
-  const received = request.headers.get("X-YEXUX-Admin-Key") || "";
-
-  return json({
-    ok: true,
-    admin_key_configured: !!env.ADMIN_KEY,
-    header_received: !!received,
-    admin_key_length: env.ADMIN_KEY ? String(env.ADMIN_KEY).length : 0,
-    header_length: received.length,
-    keys_match: !!env.ADMIN_KEY && received === env.ADMIN_KEY
-  });
-}
+      if (path === "/api/health" && request.method === "GET") {
+        return json({ ok: true, service: "YEXUX Convites", version: "2.1.2" });
+      }
 
       if (path === "/api/invites" && request.method === "POST") {
         if (!adminOK(request, env)) return json({ ok:false, error:"Não autorizado." }, 401);
