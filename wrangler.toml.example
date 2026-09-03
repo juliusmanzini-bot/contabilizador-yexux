@@ -1,0 +1,11 @@
+name = "yexux-convites"
+main = "worker.js"
+compatibility_date = "2026-08-28"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yexux-convites"
+database_id = "COLE_AQUI_O_DATABASE_ID"
+
+# Configure a chave administrativa como SECRET, nunca neste arquivo:
+# npx wrangler secret put ADMIN_KEY
